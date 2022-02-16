@@ -3,7 +3,7 @@
 <head>
     <script>
         function checkMaths(form) {
-            if (form.answerPower.value === 1024) {
+            if (form.answerPower.value === "1024") {
                 document.getElementById("powerOutput").innerHTML = "Correct!";
             } else {
                 document.getElementById("powerOutput").innerHTML = "Incorrect!";
@@ -13,6 +13,11 @@
         } else {
             document.getElementById("binaryOutput").innerHTML = "Incorrect!";
         }
+            if (form.answerPlus.value === "4") {
+                document.getElementById("plusOutput").innerHTML = "Correct!";
+            } else {
+                document.getElementById("plusOutput").innerHTML = "Incorrect!";
+                }
 }
 
     </script>
@@ -32,6 +37,11 @@
         <label>What is the binary equivalent to the decimal number 255?</label>
         <input type='text' size=25 name='answerBinary'>
         <label id="binaryOutput"></label>
+    </p>
+    <p>
+        <label>What is 2 plus 2?</label>
+        <input type='text' size=25 name="answerPlus">
+        <label id="plusOutput"></label>
     </p>
     <button onclick="checkMaths(this.form)" type="button"> Check Maths</button>
 </form>
